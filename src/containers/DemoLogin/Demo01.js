@@ -1,10 +1,11 @@
 import React from "react";
 import Login from "../../components/login";
+import LoginHalo from '../../components/LoginHalo';
 
 function Demo2() {
     return (
       <div>
-        <Login></Login>
+        <LoginHalo/>
       </div>
       );
   }
