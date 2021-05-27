@@ -109,7 +109,6 @@ export default function BasicExample() {
           {'.'}
         </AtomTypography>
       </AtomBox>
-    </AtomContainer>
-    
+    </AtomContainer>    
   );
 }

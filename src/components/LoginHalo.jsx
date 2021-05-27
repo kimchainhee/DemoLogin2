@@ -1,6 +1,5 @@
 import React from "react";
 
-import AtomBox from "../components/Atomic/atoms/AtomBox/index";
 import AtomButton from "../components/Atomic/atoms/AtomButton/index";
 import AtomLink from "../components/Atomic/atoms/AtomLink/index";
 import AtomTextField from "../components/Atomic/atoms/AtomTextField/index";
@@ -8,23 +7,26 @@ import AtomGrid from "../components/Atomic/atoms/AtomGrid/index";
 import AtomTypography from "../components/Atomic/atoms/AtomTypography/index";
 import AtomPaper from "../components/Atomic/atoms/AtomPaper/index";
 import AtomDivider from "../components/Atomic/atoms/AtomDivider/index";
+import AtomHidden from "../components/Atomic/atoms/AtomHidden/index";
+
+import PropTypes from 'prop-types';
 
 import { makeStyles } from '@material-ui/core/styles';
 
 import AndroidIcon from "../icons/Pages/AndroidIcon";
-import AppleIcon from '@material-ui/icons/Apple';
+import AppleIcon from '../icons/Pages/AppleIcon';
+import GetAppIcon from '../icons/Pages/GetAppIcon';
  
 import ImgLogo from '../img/Pages/Logo';
 
 const useStyles = makeStyles ((theme) => ({
+
     rootPaper01: {
-        display : 'flex',
-        height : '550px',
-        backgroundColor : '#fafafa'
+        position: 'relative',
     },
     rootItem01: {
         marginTop : theme.spacing(6),
-        marginLeft : theme.spacing(32),
+        
     },
         rootItem0101: {
             marginBottom : theme.spacing(7),
@@ -83,17 +85,8 @@ const useStyles = makeStyles ((theme) => ({
                 backgroundColor : '#4caf50',
                 color : 'white',
             },
-    rootPaper02: {
-        display : 'flex',
-        height : '200px',
-        backgroundColor : '#eeeeee'
-    },
-        rootItem001: {
-            marginLeft : theme.spacing(32)
-        },
         rootItem00101: {
             marginTop : theme.spacing(4),
-            marginRight : theme.spacing(1),
             marginBottom : theme.spacing(2),
             borderRadius : '24px',
             textTransform : 'none',
@@ -103,52 +96,97 @@ const useStyles = makeStyles ((theme) => ({
             fontSize : '12px',
         },
         rootItem00103: {
-            marginTop : theme.spacing(4),
+            marginTop : theme.spacing(2),
+            marginBottom : theme.spacing(1),
         },
-
+        rootItem00104: {
+            marginLeft : theme.spacing(3)
+        },
+        rootItem00105: {
+            marginLeft : theme.spacing(1),    
+        },
+    rootItem03: {
+        marginTop : theme.spacing(12),
+        backgroundColor : '#eeeeee',
+        height : '200px',
+        width : '100%',
+    },
+    rootItem04: {
+        position : 'fixed',
+        padding : '5px',
+        backgroundColor : '#616161',
+        height : '60px',
+        width : '100%',
+        bottom : '0',
+        
+    },  
+        rootItem0401: {
+            color : '#039be5',
+            fontSize : '20px',
+            fontWeight : 'bold',
+            marginLeft : '10px'
+        }, 
+        rootItem0402: {
+            color : '#039be5',
+            fontSize : '10px',
+            marginLeft : '10px'
+        }, 
+        rootItem0403: {
+            backgroundColor : '#039be5',            
+        }, 
+        rootItem0404: {
+            color : 'white',
+            fontSize : '15px',           
+        }, 
   }));
+
+  LoginHahalolo.propTypes = {
+    width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
+  };
 
 export default function LoginHahalolo() { 
     const classes = useStyles();
     return(
-        <AtomGrid container>
-            <AtomGrid item xs={12}>
-                <AtomBox className={classes.rootPaper01}>
-                  <AtomGrid container >
-                    <AtomGrid item md={5} className={classes.rootItem01}>
-                        <AtomGrid container>
-                            <AtomGrid item xs={5}>
-                                <AtomGrid container>
-                                    <AtomGrid item className={classes.rootItem0101}>
-                                        <ImgLogo/>
-                                    </AtomGrid>
-                                    <AtomGrid item >
-                                        <AtomTypography>
-                                            Do you like
-                                        </AtomTypography>
-                                    </AtomGrid>
-                                    <AtomGrid item xs={12} >
-                                        <AtomTypography className={classes.rootItem0102}>
-                                            travelling?
-                                        </AtomTypography>
-                                    </AtomGrid>
-                                    <AtomGrid item xs={10}>
-                                        <AtomTypography>
-                                            Do you want to know more about next destination?                                   
-                                        </AtomTypography>
-                                    </AtomGrid>
-                                    <AtomGrid item >
-                                        <AtomTypography className={classes.rootItem0103}>
-                                            Sign in with quick operation to experience and explore our awesome conveniences.                                   
-                                        </AtomTypography>
-                                    </AtomGrid>
-                                </AtomGrid>
+        <AtomGrid container justify='space-around' className={classes.rootPaper01}>
+            <AtomGrid item md={6} xs={12} className={classes.rootItem01}>
+                <AtomGrid container justify='center'>
+                    <AtomGrid item md={12}>
+                        <AtomGrid container justify='center'>
+                            <AtomGrid item md={4} className={classes.rootItem0101}>
+                                <ImgLogo/>
                             </AtomGrid>
                         </AtomGrid>
                     </AtomGrid>
+                    <AtomGrid item md={4}>
+                        <AtomHidden mdDown>
+                            <AtomGrid item >
+                                <AtomTypography>
+                                    Do you like
+                                </AtomTypography>
+                            </AtomGrid>
+                            <AtomGrid item xs={12} >
+                                <AtomTypography className={classes.rootItem0102}>
+                                    travelling?
+                                </AtomTypography>
+                            </AtomGrid>
+                                <AtomGrid item xs={10}>
+                                    <AtomTypography>
+                                        Do you want to know more about next destination?                                   
+                                    </AtomTypography>
+                                </AtomGrid>
+                            <AtomGrid item >
+                                <AtomTypography className={classes.rootItem0103}>
+                                    Sign in with quick operation to experience and explore our awesome conveniences.                                   
+                                </AtomTypography>
+                            </AtomGrid>
+                        </AtomHidden>
+                    </AtomGrid>
+                </AtomGrid>
+            </AtomGrid>
+            <AtomGrid item md={6} xs={12}>
+                <AtomGrid container justify='center'>
                     <AtomGrid item>
-                        <AtomGrid container>
-                            <AtomPaper className={classes.rootItem02} elevation={3}>
+                        <AtomPaper className={classes.rootItem02} elevation={3} >
                                 <AtomTypography variant='h6' className={classes.rootItem0201}>
                                     Đăng nhập
                                 </AtomTypography>
@@ -173,53 +211,51 @@ export default function LoginHahalolo() {
                                     >
                                         Đăng nhập
                                     </AtomButton>
-                                    <AtomGrid container justify='center'>
-                                        <AtomLink 
-                                        href='https://www.hahalolo.com/auth/forgotpw' 
-                                        variant='body2' 
-                                        className={classes.rootItem020203}
-                                        >
-                                            Quên mật khẩu?
-                                        </AtomLink>
-                                    </AtomGrid>
-                                    <div>
-                                        <AtomGrid container>
-                                            <AtomGrid item xs={5} className={classes.rootItem020205}>
-                                                <AtomDivider/>
-                                            </AtomGrid>
-                                            <AtomGrid item xs={2}>
-                                                <AtomGrid container justify='center'>
-                                                    <AtomTypography className={classes.rootItem020204}>hoặc</AtomTypography>
-                                                </AtomGrid>
-                                            </AtomGrid>                                   
-                                            <AtomGrid item xs={5} className={classes.rootItem020205}>
-                                                <AtomDivider/>
-                                            </AtomGrid>
+                                        <AtomGrid container justify='center'>
+                                            <AtomLink 
+                                                href='https://www.hahalolo.com/auth/forgotpw' 
+                                                variant='body2' 
+                                                className={classes.rootItem020203}
+                                            >
+                                                Quên mật khẩu?
+                                            </AtomLink>
                                         </AtomGrid>
-                                    </div>
-                                    <AtomGrid container justify='center'>
-                                        <AtomButton
-                                            type='registration'
-                                            variant='contained'
-                                            size='large'
-                                            className={classes.rootItem020206}
-                                        >
-                                            Đăng ký
-                                        </AtomButton>
-                                    </AtomGrid>
-                                </form>
-                            </AtomPaper>
-                        </AtomGrid>
+                                            <div>
+                                                <AtomGrid container>
+                                                    <AtomGrid item xs={5} className={classes.rootItem020205}>
+                                                        <AtomDivider/>
+                                                    </AtomGrid>
+                                                    <AtomGrid item xs={2}>
+                                                        <AtomGrid container justify='center'>
+                                                            <AtomTypography className={classes.rootItem020204}>hoặc</AtomTypography>
+                                                        </AtomGrid>
+                                                    </AtomGrid>                                   
+                                                    <AtomGrid item xs={5} className={classes.rootItem020205}>
+                                                        <AtomDivider/>
+                                                    </AtomGrid>
+                                                </AtomGrid>
+                                            </div>
+                                            <AtomGrid container justify='center'>
+                                                <AtomButton
+                                                    type='registration'
+                                                    variant='contained'
+                                                    size='large'
+                                                    className={classes.rootItem020206}
+                                                >
+                                                    Đăng ký
+                                                </AtomButton>
+                                            </AtomGrid>
+                                    </form>
+                            </AtomPaper>                             
                     </AtomGrid>
                 </AtomGrid>
-            </AtomBox>
             </AtomGrid>
-            <AtomGrid item xs={12}>
-                <AtomBox className={classes.rootPaper02}>
-                    <AtomGrid container>
-                        <AtomGrid item md={6} className={classes.rootItem001}>
-                            <AtomGrid container>
-                                <AtomGrid item>
+            <AtomGrid item md={12} xs={12} className={classes.rootItem03}>
+                <AtomGrid container >
+                    <AtomGrid item md={6} xs={12}>
+                        <AtomGrid container justify='center' >
+                            <AtomHidden smDown>
+                                <AtomGrid item className={classes.rootItem00104}>
                                     <AtomButton
                                         type='downloadGP'
                                         variant='outlined'
@@ -237,7 +273,7 @@ export default function LoginHahalolo() {
                                         </AtomGrid>
                                     </AtomButton>
                                 </AtomGrid>
-                                <AtomGrid item>
+                                <AtomGrid item className={classes.rootItem00105}>
                                     <AtomButton
                                         type='downloadAT'
                                         variant='outlined'
@@ -255,33 +291,69 @@ export default function LoginHahalolo() {
                                         </AtomGrid>
                                     </AtomButton>
                                 </AtomGrid>
-                                <AtomGrid item xs={12} >
-                                    <AtomTypography className={classes.rootItem00102}>
-                                        © 2017 Hahalolo. All rights reserved
-                                    </AtomTypography>
-                                </AtomGrid>                               
-                            </AtomGrid>                                                                                  
-                        </AtomGrid>
-                        <AtomGrid item md={2}>
-                            <div>
-                                <AtomGrid container justify='space-evenly' className={classes.rootItem00103}>
+                            </AtomHidden>
+                            <AtomGrid item md={12} xs={12}>                                 
+                                <AtomGrid container justify='center'>
                                     <AtomGrid item>
-                                        <AtomLink href="vn">
-                                            Tiếng Việt
-                                        </AtomLink>
-                                    </AtomGrid>
-                                    <AtomDivider orientation="vertical" flexItem />
-                                    <AtomGrid item>
-                                        <AtomLink href="en">
-                                            English
-                                        </AtomLink>
-                                    </AtomGrid>
-                                </AtomGrid>
-                            </div>
+                                        <AtomTypography className={classes.rootItem00102}>
+                                            © 2017 Hahalolo. All rights reserved
+                                        </AtomTypography>       
+                                    </AtomGrid>     
+                                </AtomGrid>                            
+                            </AtomGrid>
                         </AtomGrid>
                     </AtomGrid>
-                </AtomBox>
+                    <AtomGrid item md={6} xs={12}>
+                        <AtomGrid container spacing={5} justify='center' className={classes.rootItem00103}>
+                            <AtomGrid item>
+                                <AtomLink href="vn" >
+                                    Tiếng Việt
+                                </AtomLink>
+                            </AtomGrid>
+                                <AtomDivider orientation="vertical" flexItem />
+                            <AtomGrid item>
+                                <AtomLink href="en" >
+                                    English
+                                </AtomLink>  
+                            </AtomGrid>
+                        </AtomGrid>
+                    </AtomGrid>
+           
+                </AtomGrid>
             </AtomGrid>
+            <AtomHidden mdUp>
+                <AtomGrid item md={12} xs={12} className={classes.rootItem04}>
+                    <AtomGrid container justify='space-between' alignItems='center'>                       
+                        <AtomGrid item xs={8} >
+                            <AtomTypography className={classes.rootItem0401}>
+                                ỨNG DỤNG HAHALOLO 
+                            </AtomTypography>
+                            <AtomTypography className={classes.rootItem0402}>
+                                KẾT NỐI DỄ DÀNG & NHANH CHÓNG
+                            </AtomTypography>
+                        </AtomGrid>
+                        <AtomGrid item xs={4}>
+                            <AtomGrid container justify='flex-end'>
+                                <AtomButton 
+                                    variant='contained'
+                                    href='https://play.google.com/store/apps/details?id=com.hahalolo.android.social&hl=en'
+                                    className={classes.rootItem0403}>
+                                    <AtomGrid container>
+                                        <AtomGrid item>
+                                            <AtomTypography className={classes.rootItem0404}>
+                                                Tải ngay
+                                            </AtomTypography>    
+                                        </AtomGrid> 
+                                        <AtomGrid item className={classes.rootItem0404}>
+                                            <GetAppIcon/>
+                                        </AtomGrid> 
+                                    </AtomGrid>
+                                </AtomButton>
+                            </AtomGrid>
+                        </AtomGrid>                            
+                    </AtomGrid>
+                </AtomGrid>
+            </AtomHidden>
         </AtomGrid>
     );
 
