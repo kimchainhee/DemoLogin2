@@ -1,12 +1,12 @@
 import React from "react";
-import LOGIN from "../../components/LOGIN";
-import LOGINHalo from '../../components/LOGINHalo';
-import Simple01 from '../../components/SimpleBottomNavigation';
+import Login from "../../components/Login";
+import LoginHalo from '../../components/LoginHalo';
+import SearchProducts from '../../components/SearchProducts';
 
 function Demo2() {
     return (
       <div>
-        <LOGINHalo/>
+        <SearchProducts/>
       </div>
       );
   }

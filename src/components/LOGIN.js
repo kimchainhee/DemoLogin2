@@ -1,15 +1,15 @@
 import React from "react";
 
-import AtomBox from "../components/Atomic/atoms/AtomBox/index";
-import AtomButton from "../components/Atomic/atoms/AtomButton/index";
-import AtomCheckbox from "../components/Atomic/atoms/AtomCheckbox/index";
-import AtomContainer from "../components/Atomic/atoms/AtomContainer/index";
-import AtomFormControlLabel from "../components/Atomic/atoms/AtomFormControlLabel/index";
-import AtomLink from "../components/Atomic/atoms/AtomLink/index";
-import AtomTextField from "../components/Atomic/atoms/AtomTextField/index";
-import AtomGrid from "../components/Atomic/atoms/AtomGrid/index";
-import AtomAvatar from "../components/Atomic/atoms/AtomAvatar/index";
-import AtomTypography from "../components/Atomic/atoms/AtomTypography/index";
+import AtomBox from "./Atomic/atoms/AtomBox/index";
+import AtomButton from "./Atomic/atoms/AtomButton/index";
+import AtomCheckbox from "./Atomic/atoms/AtomCheckbox/index";
+import AtomContainer from "./Atomic/atoms/AtomContainer/index";
+import AtomFormControlLabel from "./Atomic/atoms/AtomFormControlLabel/index";
+import AtomLink from "./Atomic/atoms/AtomLink/index";
+import AtomTextField from "./Atomic/atoms/AtomTextField/index";
+import AtomGrid from "./Atomic/atoms/AtomGrid/index";
+import AtomAvatar from "./Atomic/atoms/AtomAvatar/index";
+import AtomTypography from "./Atomic/atoms/AtomTypography/index";
 
 import { makeStyles } from '@material-ui/core/styles';
 
