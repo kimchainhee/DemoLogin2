@@ -20,7 +20,6 @@ import AppleIcon from "../icons/Pages/AppleIcon";
 
 import ImgLogo from "../img/Pages/Logo";
 import { CardContent } from "@material-ui/core";
-import { getThemeProps } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   rootCard: {
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
   },
   rootBox02: {
-    height : '120px',
+    height: "120px",
     backgroundColor: "#eeeeee",
   },
   rootContent: {
@@ -92,7 +91,7 @@ LoginHahalolo.propTypes = {
 export default function LoginHahalolo() {
   const classes = useStyles();
   return (
-    <AtomBox className={classes.rootBox} flexDirection='column' height='100vh'>
+    <AtomBox className={classes.rootBox} flexDirection="column" height="100vh">
       <AtomContainer>
         <AtomGrid container spacing={6} justify="space-around">
           <AtomGrid item md="true">
@@ -203,9 +202,9 @@ export default function LoginHahalolo() {
           </AtomGrid>
         </AtomGrid>
       </AtomContainer>
-      <AtomBox className={classes.rootBox02} mt='auto' >
+      <AtomBox className={classes.rootBox02} mt="auto">
         <AtomContainer>
-          <AtomGrid container justify="space-around" alignItems="center" >
+          <AtomGrid container justify="space-around" alignItems="center">
             <AtomGrid item md="true">
               <AtomHidden smDown>
                 <AtomButton
@@ -237,26 +236,26 @@ export default function LoginHahalolo() {
                 © 2017 Hahalolo. All rights reserved
               </AtomTypography>
             </AtomGrid>
-            <AtomGrid item xs={12} md="auto" >
-              <AtomGrid container justify="center" >
+            <AtomGrid item xs={12} md="auto">
+              <AtomGrid container justify="center">
                 <AtomGrid item>
-                <AtomButton
-                  href="vn"
-                  type="vietnam"
-                  className={classes.rootButton04}
-                >
-                  Tiếng Việt
-                </AtomButton>
+                  <AtomButton
+                    href="vn"
+                    type="vietnam"
+                    className={classes.rootButton04}
+                  >
+                    Tiếng Việt
+                  </AtomButton>
                 </AtomGrid>
-                    <AtomDivider orientation="vertical" flexItem />
+                <AtomDivider orientation="vertical" flexItem />
                 <AtomGrid item>
-                <AtomButton
-                  href="en"
-                  type="english"
-                  className={classes.rootButton04}
-                >
-                  English
-                </AtomButton>
+                  <AtomButton
+                    href="en"
+                    type="english"
+                    className={classes.rootButton04}
+                  >
+                    English
+                  </AtomButton>
                 </AtomGrid>
               </AtomGrid>
             </AtomGrid>
